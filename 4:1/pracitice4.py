@@ -3,7 +3,7 @@ import random
 def make_question():
     a = random.randint(1,40)
     b = random.randint(1,20)
-    op = random.randint(1,3)
+    op = random.randint(1,4)
 
 
     q = str(a)
@@ -14,6 +14,8 @@ def make_question():
         q = q + "-"
     if op == 3:
         q = q + "*"
+    if op == 4:
+        q = q + "/"
     
     q = q + str(b)
 
@@ -38,5 +40,3 @@ print("정답 : ", sc1, "오답 : ", sc2)
 
 if sc2 == 0:
     print("당신은 천재입니다!")
-else:
-    print("%s개나 맞추시나디 대단해요!", sc1)
